@@ -1,0 +1,13 @@
+export type Course={id:string;departmentId?:string|null;code:string;title:string;description:string;isArchived:boolean;createdAt:string};
+export type Submission={id:string;studentId:string;studentName?:string;assignmentId:string;textAnswer:string|null;filePath:string|null;submittedAt:string;isLate:boolean;marksObtained:number|null;feedback:string|null};
+export type Assignment={id:string;title:string;instructions:string;maxMarks:number;dueAt:string;allowLate:boolean;attachmentPath:string|null;submission:Submission|null};
+export type Question={id:string;position:number;type:'mcq_single'|'mcq_multi'|'true_false';prompt:string;options:{id:string;text:string}[];marks:number;correctOptionIds?:string[]};
+export type Attempt={id:string;startedAt:string;expiresAt:string;submittedAt:string|null;score:number|null;answers:Record<string,string[]>;questions:Question[]};
+export type Quiz={id:string;title:string;description:string;timeLimitMinutes:number;opensAt:string;closesAt:string;isPublished:boolean;questions?:Question[];attempt:Attempt|null};
+export type Resource={id:string;title:string;description:string;fileName:string;mimeType:string;sizeBytes:number;createdAt:string;uploadedBy:string};
+export type Announcement={id:string;courseId:string|null;authorId:string;title:string;body:string;isPinned:boolean;createdAt:string};
+export type Complaint={id:string;subject:string;description:string;category:string;status:'open'|'in_review'|'resolved'|'rejected';adminResponse:string|null;attachmentPath:string|null;createdAt:string};
+export type Mark={studentId:string;courseId:string;kind:string;itemId:string;title:string;obtained:number|null;max:number;gradedAt:string|null};
+export type Message={id:string;senderId:string;senderName?:string;senderRole?:string;body:string;createdAt:string;deletedAt:string|null};
+export type Member={id:string;fullName:string;role:string};
+export type Metrics={courses:number;submissions:number;quizzesCompleted:number;marks:{percentage:number;obtained:number;maximum:number}};

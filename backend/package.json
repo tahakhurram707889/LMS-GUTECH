@@ -1,0 +1,45 @@
+{
+  "name": "@gutech/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build && node tools/dev.mjs",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "bootstrap:admin": "npm run build:scripts && node .scripts-build/scripts/bootstrap-admin.js",
+    "doctor": "npm run build:scripts && node .scripts-build/scripts/doctor.js",
+    "build:scripts": "tsc -p tsconfig.scripts.json"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.78.0",
+    "cookie-parser": "1.4.7",
+    "cors": "2.8.5",
+    "csv-parse": "5.6.0",
+    "dotenv": "16.6.1",
+    "express": "4.21.2",
+    "express-rate-limit": "7.5.1",
+    "file-type": "20.5.0",
+    "helmet": "8.1.0",
+    "multer": "2.0.2",
+    "pino": "9.14.0",
+    "pino-http": "10.5.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "1.4.9",
+    "@types/cors": "2.8.19",
+    "@types/express": "4.17.23",
+    "@types/multer": "2.0.0",
+    "@types/node": "^22.20.5",
+    "@types/supertest": "6.0.3",
+    "supertest": "7.1.4",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

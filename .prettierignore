@@ -1,0 +1,10 @@
+node_modules
+dist
+coverage
+package-lock.json
+frontend/package-lock.json
+docs/BUILD_SPEC.txt
+docs/initial-prototype
+supabase/migrations
+supabase/seed.sql
+supabase/tests

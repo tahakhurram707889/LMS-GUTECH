@@ -1,0 +1,41 @@
+{
+  "name": "@gutech/frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "3.10.0",
+    "@radix-ui/react-slot": "1.2.3",
+    "@supabase/supabase-js": "2.78.0",
+    "@tanstack/react-query": "5.90.5",
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "lucide-react": "0.468.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-hook-form": "7.65.0",
+    "react-router-dom": "6.30.1",
+    "tailwind-merge": "2.6.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.0",
+    "@types/react": "18.3.26",
+    "@types/react-dom": "18.3.7",
+    "autoprefixer": "10.4.21",
+    "jsdom": "26.1.0",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.18",
+    "typescript": "5.9.3",
+    "vite": "6.4.1",
+    "vitest": "3.2.4"
+  }
+}
