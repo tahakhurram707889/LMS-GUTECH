@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # GUTECH Internal LMS
 
 An internal React/TypeScript learning workspace with an Express API and Supabase Auth, Postgres, Storage and Realtime. There is no public signup. Admins create accounts, assign teachers, enroll students and review complaints.
@@ -80,3 +81,6 @@ Every public table enables RLS. Workflow writes are scoped transactional SQL RPC
 Uploads use private buckets, verified content types, 25 MiB limits (10 MiB complaints), safe UUID paths and 60-second download links. API validation protects API uploads; direct Storage calls remain bounded by bucket type/size/path policies. File/metadata cleanup cannot be a single Postgres/Storage transaction; failed authoring may leave owner-scoped orphan uploads for future cleanup. Existing signed URLs remain usable until expiry.
 
 Lists are paginated (maximum 100 rows); chat uses a timestamp cursor. Identical-timestamp page boundaries are a known edge case. Rate limiters use in-process storage for local/single-instance operation; production replicas need shared storage and explicit trusted-proxy configuration. Large enrollment batches are limited to 100 rows per CSV. Do not claim deployment readiness until live RLS/SMTP/browser checks pass.
+=======
+# LMS-GUTECH
+>>>>>>> cd206a7e2633b5bbc1d4a86e157a682453dc02d0
